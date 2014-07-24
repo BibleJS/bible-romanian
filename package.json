@@ -1,0 +1,23 @@
+{
+  "name": "bible-romanian",
+  "version": "0.1.0",
+  "description": "Romanian Bible module",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:BibleJS/bible-romanian.git"
+  },
+  "keywords": [
+    "romanian",
+    "bible"
+  ],
+  "author": "Ionică Bizău <bizauionica@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/BibleJS/bible-romanian/issues"
+  },
+  "homepage": "https://github.com/BibleJS/bible-romanian"
+}
