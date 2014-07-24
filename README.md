@@ -10,6 +10,17 @@ $ cd bible-romanian
 $ npm install
 ```
 
+## Example
+```js
+// Dependencies
+var RoBible = require("../index");
+
+// Get verse
+RoBible.getVerse("Matei 1:1", function (err, data) {
+    console.log(err || data);
+});
+```
+
 ## How to contribute
 
 1. File an issue in the repository, using the bug tracker, describing the
