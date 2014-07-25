@@ -104,4 +104,5 @@ RomanianBible.getBooks = function (callback) {
     for (var i = 0; i < ALL_BOOKS.length; ++i) {
         books.push(ALL_BOOKS[i].book);
     }
+    callback(null, books);
 };
