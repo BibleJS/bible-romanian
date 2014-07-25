@@ -19,6 +19,11 @@ var RoBible = require("../index");
 RoBible.getVerse("Matei 1:1", function (err, data) {
     console.log(err || data);
 });
+
+// Get books
+RoBible.getBooks(function (err, data) {
+    console.log(err || data);
+});
 ```
 
 ## How to contribute
