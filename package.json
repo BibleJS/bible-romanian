@@ -11,6 +11,9 @@
     "type": "git",
     "url": "git@github.com:BibleJS/bible-romanian.git"
   },
+  "dependencies": {
+    "bible-reference-parser": "1.0.0"
+  },
   "keywords": [
     "romanian",
     "bible"
