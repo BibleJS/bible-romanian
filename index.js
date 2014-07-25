@@ -1,6 +1,10 @@
 // Dependencies
 var ReferenceParser = require("bible-reference-parser");
 
+// Constants
+const ALL_VERSES = require("./all-verses.json");
+const ALL_BOOKS = require("./all-books.json");
+
 /**
  * find
  * This function searches returns the objects from an array
@@ -46,9 +50,7 @@ function find(array, query) {
     return res;
 }
 
-// Constants
-const ALL_VERSES = require("./all-verses.json");
-
+// Constructor
 var RomanianBible = module.exports = {};
 
 /**
@@ -86,4 +88,20 @@ RomanianBible.getVerse = function (reference, callback) {
 
     // Send the response
     callback (null, find(ALL_VERSES, query));
+};
+
+/**
+ * getBooks
+ * Returns an array with Bible books in Romanian
+ *
+ * @name getBooks
+ * @function
+ * @param {Function} callback The callback function
+ * @return
+ */
+RomanianBible.getBooks = function (callback) {
+    var books = [];
+    for (var i = 0; i < ALL_BOOKS.length; ++i) {
+        books.push(ALL_BOOKS[i].book);
+    }
 };
