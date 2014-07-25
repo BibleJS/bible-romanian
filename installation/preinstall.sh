@@ -1,1 +1,5 @@
-wget https://raw.githubusercontent.com/BibleJS/content/38ddf33a4ec62e75378f43834d1d9559a19545d9/verses.ro.json -O all-verses.json
+#!/bin/bash
+ALL_VERSES_PATH="all-verses.json"
+if [ ! -f $ALL_VERSES_PATH ]; then
+    wget http://goo.gl/k7ZySl -O $ALL_VERSES_PATH
+fi
