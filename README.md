@@ -1,4 +1,4 @@
-# bible-romanian
+# Romanian Bible
 Romanian Bible module
 
 ## Installation
