@@ -10,3 +10,8 @@ RoBible.getVerse("Matei 1:1", function (err, data) {
 RoBible.getBooks(function (err, data) {
     console.log(err || data);
 });
+
+// Search
+RoBible.search(/meroza/i, function (err, data) {
+    console.log(err || data);
+});
