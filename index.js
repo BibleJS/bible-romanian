@@ -100,7 +100,30 @@ RomanianBible.getVerse = function (reference, callback) {
     var result = find(ALL_VERSES, query)
 
     // Send the response
-    callback (null, result);
+    callback(null, result);
+};
+
+/**
+ * search
+ * Searches a String/Regular expression in all verses
+ *
+ * @name search
+ * @function
+ * @param {String|RegExp} term String/Regular expression that should be contained in verses.
+ * @param {Function} callback The callback function
+ * @return
+ */
+RomanianBible.search = function (term, callback) {
+
+    // Convert to regular expression
+    if (typeof term === "string") {
+        term = new RegExp(term);
+    }
+
+    var query = { text: term };
+
+    // Send the response
+    callback(null, find(ALL_VERSES, query));
 };
 
 /**
