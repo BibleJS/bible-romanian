@@ -85,13 +85,22 @@ RomanianBible.getVerse = function (reference, callback) {
         return RomanianBible.getVerse.call(this, query, callback);
     }
 
+    // Build the query
+    var query = {
+        bookname:   reference.bookname || reference.book
+      , chapter:    reference.chapter
+      , verse:      reference.verse || reference.verses
+    };
+
     // "ALL" is special
-    if (reference.verse === "ALL") {
+    if (query.verse === "ALL") {
         delete query.verse;
     }
 
+    var result = find(ALL_VERSES, query)
+
     // Send the response
-    callback (null, find(ALL_VERSES, reference));
+    callback (null, result);
 };
 
 /**
