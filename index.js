@@ -71,23 +71,27 @@ var RomanianBible = module.exports = {};
 RomanianBible.getVerse = function (reference, callback) {
 
     // Parse reference
-    var parsed = ReferenceParser(reference);
-    if (!parsed) { return callback("Cannot parse the input."); }
+    if (typeof reference === "string") {
+        var parsed = ReferenceParser(reference);
+        if (!parsed) { return callback("Cannot parse the input."); }
 
-    // Build the query
-    var query = {
-        bookname:   parsed.book
-      , chapter:    parsed.chapter
-      , verse:      parsed.verses
-    };
+        // Build the query
+        var query = {
+            bookname:   parsed.book
+          , chapter:    parsed.chapter
+          , verse:      parsed.verses
+        };
+
+        return RomanianBible.getVerse.call(this, query, callback);
+    }
 
     // "ALL" is special
-    if (query.verse === "ALL") {
+    if (reference.verse === "ALL") {
         delete query.verse;
     }
 
     // Send the response
-    callback (null, find(ALL_VERSES, query));
+    callback (null, find(ALL_VERSES, reference));
 };
 
 /**
