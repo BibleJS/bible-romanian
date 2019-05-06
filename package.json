@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "node test/index",
-    "preinstall": "installation/preinstall.sh"
+    "preinstall": "scripts/preinstall.sh"
   },
   "repository": {
     "type": "git",
