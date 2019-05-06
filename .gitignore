@@ -3,5 +3,6 @@
 *~
 *.log
 node_modules
-all-verses.json
-all-books.json
+*.env
+.DS_Store
+package-lock.json

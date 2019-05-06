@@ -18,6 +18,62 @@ yarn add bible-romanian
 ```
 
 
+## :clipboard: Example
+
+
+
+```js
+// Dependencies
+const bible = require("bible-romanian");
+
+// Get verse
+bible.getVerse("Matei 1:1", function (err, data) {
+    console.log(err || data);
+    // [ { bookname: 'Matei',
+    //     chapter: '1',
+    //     verse: '1',
+    //     text:
+    //      'Cartea neamului lui Isus Hristos, fiul lui David, fiul lui Avraam.' } ]
+});
+
+// Get books
+bible.getBooks(function (err, data) {
+    console.log(err || data);
+    // [ 'Geneza',
+    //   'Exodul',
+    //   'Leviticul',
+    //   'Numeri',
+    //   'Deuteronomul',
+    //   'Iosua',
+    //   'Judecători',
+    //   'Rut',
+    //   ... ]
+});
+
+// Search
+bible.search(/meroza/i, function (err, data) {
+    console.log(err || data);
+    // [ { bookname: 'Judecători',
+    //     chapter: '5',
+    //     verse: '23',
+    //     text:
+    //      'Blestemaţi pe Meroza, a zis Îngerul Domnului, blestemaţi, blestemaţi pe locuitorii lui; căci n-au venit în ajutorul Domnului, în ajutorul Domnului, printre oamenii viteji.' } ]
+});
+```
+
+
+
+## :question: Get Help
+
+There are few ways to get help:
+
+ 1. Please [post questions on Stack Overflow](https://stackoverflow.com/questions/ask). You can open issues with questions, as long you add a link to your Stack Overflow question.
+ 2. For bug reports and feature requests, open issues. :bug:
+
+ 3. For direct and quick help, you can [use Codementor](https://www.codementor.io/johnnyb). :rocket:
+
+
+
 ## :memo: Documentation
 
 
@@ -99,7 +155,7 @@ Thanks! :heart:
 [amazon]: http://amzn.eu/hRo9sIZ
 [paypal-donations]: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RVXDDLKKLQRJW
 
-[license]: http://showalicense.com/?fullname=Ionic%C4%83%20Biz%C4%83u%20%3Cbizauionica%40gmail.com%3E&year=2014#license-mit
-[website]:
+[license]: http://showalicense.com/?fullname=Ionic%C4%83%20Biz%C4%83u%20%3Cbizauionica%40gmail.com%3E%20(https%3A%2F%2Fionicabizau.net)&year=2014#license-mit
+[website]: https://ionicabizau.net
 [contributing]: /CONTRIBUTING.md
 [docs]: /DOCUMENTATION.md
