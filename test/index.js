@@ -1,5 +1,5 @@
 // Dependencies
-var RoBible = require("../index");
+const RoBible = require("..");
 
 // Get verse
 RoBible.getVerse("Matei 1:1", function (err, data) {

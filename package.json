@@ -1,8 +1,8 @@
 {
   "name": "bible-romanian",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Romanian Bible module",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
     "test": "node test/index",
     "preinstall": "installation/preinstall.sh"
