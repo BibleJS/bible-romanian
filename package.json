@@ -18,10 +18,25 @@
     "romanian",
     "bible"
   ],
-  "author": "Ionică Bizău <bizauionica@gmail.com>",
+  "author": "Ionică Bizău <bizauionica@gmail.com> (https://ionicabizau.net)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/BibleJS/bible-romanian/issues"
   },
-  "homepage": "https://github.com/BibleJS/bible-romanian"
+  "homepage": "https://github.com/BibleJS/bible-romanian",
+  "files": [
+    "bin/",
+    "app/",
+    "lib/",
+    "dist/",
+    "src/",
+    "scripts/",
+    "resources/",
+    "menu/",
+    "cli.js",
+    "index.js",
+    "bloggify.js",
+    "bloggify.json",
+    "bloggify/"
+  ]
 }
