@@ -1,6 +1,6 @@
 {
   "name": "bible-romanian",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Romanian Bible module",
   "main": "lib/index.js",
   "scripts": {
